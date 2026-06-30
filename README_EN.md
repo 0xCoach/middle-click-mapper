@@ -27,26 +27,9 @@ The default mapping is **Right ⌘**, which works out of the box with voice-inpu
 
 ## UI Preview
 
-```
-┌─ 鼠标中键映射助手 ─────────────────┐
-│  鼠标中键 → 自定义快捷键            │
-│                                    │
-│ ┌─ 运行状态 ────────────────────┐ │
-│ │ ●  辅助功能权限  ✓ 已授权      │ │
-│ │ ●  中键监听      ● 运行中      │ │
-│ └──────────────────────────────┘ │
-│                                    │
-│ 触发快捷键                         │
-│ ┌──────────────────────────────┐ │
-│ │         右 Command            │ │
-│ └──────────────────────────────┘ │
-│ 按一下鼠标中键，这里会闪烁确认      │
-│                                    │
-│ ☑ 开机自动启动        [设置快捷键]  │
-│ ──────────────────────────────── │
-│ v1.1                      [完成]   │
-└────────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/screenshot.png" alt="Middle Click Mapper UI screenshot" width="460" />
+</p>
 
 **Status visualization** is the core design — whether permission is granted, whether the listener is running, and whether the middle button was captured, all at a glance. When you press the middle button, the shortcut box flashes ✓ for instant confirmation.
 

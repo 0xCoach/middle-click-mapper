@@ -28,7 +28,7 @@ App 通过 `CGEventTap` 监听全局鼠标事件，捕获到中键（鼠标 butt
 ## 界面预览
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1c90a6ab-d96c-4d86-91d3-92ea98ea6847" alt="鼠标中键映射助手界面截图" width="460" />
+  <img src="assets/screenshot.png" alt="鼠标中键映射助手界面截图" width="460" />
 </p>
 
 
