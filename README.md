@@ -26,7 +26,10 @@ App 通过 `CGEventTap` 监听全局鼠标事件，捕获到中键（鼠标 butt
 | 触发方式 | 按住触发，松开结束 |
 
 ## 界面预览
-<img width="920" height="844" alt="image" src="https://github.com/user-attachments/assets/1c90a6ab-d96c-4d86-91d3-92ea98ea6847" />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1c90a6ab-d96c-4d86-91d3-92ea98ea6847" alt="鼠标中键映射助手界面截图" width="460" />
+</p>
 
 
 **状态可视化**是它的核心设计——权限是否给、监听是否在跑、中键有没有触发，一目了然。按下中键时，「触发快捷键」框会闪烁 ✓，让你即时确认事件被捕获。
