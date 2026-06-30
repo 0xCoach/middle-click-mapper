@@ -543,7 +543,8 @@ private final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
             permissionLabel.widthAnchor.constraint(equalTo: tapLabel.widthAnchor),
 
             permissionValue.centerYAnchor.constraint(equalTo: permissionDot.centerYAnchor),
-            permissionValue.leadingAnchor.constraint(equalTo: permissionLabel.trailingAnchor, constant: 10),
+            // 值文字锚定到卡片内的固定列，与“中键监听”行的值严格左对齐
+            permissionValue.leadingAnchor.constraint(equalTo: statusBg.leadingAnchor, constant: 116),
             permissionValue.trailingAnchor.constraint(lessThanOrEqualTo: permissionButton.leadingAnchor, constant: -10),
 
             permissionButton.centerYAnchor.constraint(equalTo: permissionDot.centerYAnchor),
@@ -558,7 +559,8 @@ private final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
             tapLabel.leadingAnchor.constraint(equalTo: tapDot.trailingAnchor, constant: 8),
 
             tapValue.centerYAnchor.constraint(equalTo: tapDot.centerYAnchor),
-            tapValue.leadingAnchor.constraint(equalTo: tapLabel.trailingAnchor, constant: 10),
+            // 与上一行值文字锚定到同一固定列，保证两行严格左对齐
+            tapValue.leadingAnchor.constraint(equalTo: statusBg.leadingAnchor, constant: 116),
             tapValue.trailingAnchor.constraint(lessThanOrEqualTo: tapButton.leadingAnchor, constant: -10),
 
             tapButton.centerYAnchor.constraint(equalTo: tapDot.centerYAnchor),
@@ -587,9 +589,10 @@ private final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
         permissionDot.isOk = permissionOK
         tapDot.isOk = tapOK
 
+        // 两行值文字格式统一：OK 时统一带「✓」前缀，未 OK 时纯文字，避免标准不一致
         permissionValue.stringValue = permissionOK ? "✓ 已授权" : "未授权"
         permissionValue.textColor = permissionOK ? .systemGreen : .systemRed
-        tapValue.stringValue = tapOK ? "运行中" : "未运行"
+        tapValue.stringValue = tapOK ? "✓ 运行中" : "未运行"
         tapValue.textColor = tapOK ? .systemGreen : .secondaryLabelColor
 
         // 按钮永远显示：未授权时为「前往授权」并触发系统弹窗；已授权后降级为「打开设置」
